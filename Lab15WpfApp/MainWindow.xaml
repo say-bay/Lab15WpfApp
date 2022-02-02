@@ -1,0 +1,85 @@
+﻿<Window x:Class="Lab15WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab15WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <FlowDocumentScrollViewer x:Name="docViewer">
+            <FlowDocument>
+                <Paragraph>
+                    <Bold>Архитектура</Bold>
+                    <Hyperlink NavigateUri="https://ru.wikipedia.org/wiki/Древняя_Греция">
+                        <Bold>Древней Греции</Bold>
+                    </Hyperlink>
+                </Paragraph>
+                <Paragraph>
+                    <Run Foreground="Brown">Основные периоды греческой архитектуры</Run>
+                </Paragraph>
+                <List MarkerStyle="Disc">
+                    <ListItem>
+                        <Paragraph>
+                            Архаический период (VII в. до н. э. до времён Писистрата (530 до н. э.))
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Раннеклассический период (530 до н. э. — 470 до н. э.)
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Классический период (470 до н. э. — 338 до н. э.)
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Период эллинизма (338 до н. э. — 180 до н. э.)
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Период Римского владычества (180 до н. э. — 90 до н. э.)
+                        </Paragraph>
+                    </ListItem>
+                </List>
+                <Table>
+                    <Table.Columns>
+                        <TableColumn/>
+                        <TableColumn/>
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph>
+                                    Древнегреческая архитектура заложила основу европейской и служила примером для архитекторов всего мира. К наиболее древним крито-микенскому, догомеровскому и гомеровскому периодам развития древнегреческой истории и архитектуры относятся развалины Кносса и Феста на Крите, ряда городов кикладской культуры на островах, циклопические мегалитические кладки Тиринфа, стен в Элевсине и Дельфах, так называемые «сокровищницы» Менелая близ Амикл и Мациаса близ Орхомена, упоминаемые еще Павсанием, и др. Развалины древних Микен и относящиеся ко 2-му тысячелетию до н. э. отдельные памятники в Аргосе, Олинфе, Орхомене и в ряде других городов относят обычно к микенскому времени. Примечательно, что раскопанные в последние годы на Кикладах города, принадлежавшие Критской и Элладской культурам, имели мощеные улицы и хорошо спроектированные двухэтажные в основном дома с развитыми в ремесленном отношении конструкциями окон и дверей, превосходившими позднейшие микенские и греческие бытовые постройки.
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph>
+                                    <Floater Width="300" HorizontalAlignment="Right">
+                                        <BlockUIContainer>
+                                            <Image Source="Data/220px.jpg"/>
+                                        </BlockUIContainer>
+                                    </Floater>
+                                </Paragraph>
+                            </TableCell>
+
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button Content="Открыть" Width="100" Click="Button_Click_2"/>
+            <Button Content="Сохранить" Width="100" Click="Button_Click_1"/>
+            <Button Content="Очистить" Width="100" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
